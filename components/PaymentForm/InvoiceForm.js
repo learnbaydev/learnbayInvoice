@@ -200,6 +200,33 @@ const InvoiceForm = ({ refund, salesMan, team }) => {
     code = "ACICEH";
   }
 
+  if (
+    query.courseName ===
+    "[Master Track] Data Science and GenAI Master Certification Program"
+  ) {
+    code = "MTDSGENAIMCP";
+  }
+
+  if (
+    query.courseName ===
+    "[Master Track] Full Stack Software Development Master Certification"
+  ) {
+    code = "MTFSSDMC";
+  }
+
+  if (
+    query.courseName ===
+    "[Master Track] Cloud and DevOps Engineering Master Certification Program"
+  ) {
+    code = "MTCDEMCP";
+  }
+
+  if (
+    query.courseName ===
+    "[Master Track] Data Analytics and Business Analytics Master Certification Program"
+  ) {
+    code = "MTDABAMCP";
+  }
   //verify submit function
   const verifySubmit = async (e) => {
     e.preventDefault();
@@ -441,8 +468,23 @@ const InvoiceForm = ({ refund, salesMan, team }) => {
             <option value="Advanced Certification in Cyber Security & Ethical Hacking">
               Advanced Certification in Cyber Security & Ethical Hacking
             </option>
-
-            
+            {/* new courses */}
+            <option value="[Master Track] Data Science and GenAI Master Certification Program">
+              [Master Track] Data Science and GenAI Master Certification Program
+            </option>
+            <option value="[Master Track] Full Stack Software Development Master Certification">
+              [Master Track] Full Stack Software Development Master
+              Certification
+            </option>
+            <option value="[Master Track] Cloud and DevOps Engineering Master Certification Program">
+              [Master Track] Cloud and DevOps Engineering Master Certification
+              Program
+            </option>
+            <option value="[Master Track] Data Analytics and Business Analytics Master Certification Program">
+              [Master Track] Data Analytics and Business Analytics Master
+              Certification Program
+            </option>
+            {/* new courses */}
           </select>
         </div>
         <div className={styles.formWrapper}>

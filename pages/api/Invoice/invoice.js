@@ -124,11 +124,17 @@ export default async function pdfGenerate(req, res) {
       courseName === "Master's in Computer Science: Data Science and AI" ||
       courseName === "GenAI Developer Certification for Professionals" ||
       courseName === "GenAI Certification for Managers & Tech Leaders" ||
-      courseName === "Executive Certification in Cyber Security & Ethical Hacking"||
-      courseName === "Executive Certification in Cloud and Devops in Collaboration With E&ICT IIT Guwahati"||
-      courseName === "Gen-AI program | Learnbay"
-
-
+      courseName ===
+        "Executive Certification in Cyber Security & Ethical Hacking" ||
+      courseName ===
+        "Executive Certification in Cloud and Devops in Collaboration With E&ICT IIT Guwahati" ||
+      courseName === "Gen-AI program | Learnbay" ||
+      courseName ===
+        "[Master Track] Data Science and GenAI Master Certification Program" ||
+      courseName ===
+        "[Master Track] Cloud and DevOps Engineering Master Certification Program" ||
+      courseName ===
+        "[Master Track] Data Analytics and Business Analytics Master Certification Program"
     ) {
       link = "https://zfrmz.in/f2TOL2P2XmiKBCBScVxn";
     }
@@ -149,8 +155,11 @@ export default async function pdfGenerate(req, res) {
     }
     if (
       courseName === "Software Development masters program" ||
-      courseName === "Software development program for freshers"||
-            courseName === "Executive Certification in Cyber Security & Ethical Hacking"
+      courseName === "Software development program for freshers" ||
+      courseName ===
+        "Executive Certification in Cyber Security & Ethical Hacking" ||
+      courseName ===
+        "[Master Track] Full Stack Software Development Master Certification"
     ) {
       link = "https://zfrmz.in/nOlE6J6FvLoZ0su8MxT8";
     }
@@ -165,24 +174,27 @@ export default async function pdfGenerate(req, res) {
       link = "https://zfrmz.in/f2TOL2P2XmiKBCBScVxn";
     }
     if (
-      courseName === "Executive program in Data Science and AI from IIT Guwahati"  ) {
+      courseName ===
+      "Executive program in Data Science and AI from IIT Guwahati"
+    ) {
       link = "https://zfrmz.in/f2TOL2P2XmiKBCBScVxn";
     }
-    if(
-      courseName === "Executive Certification in Cloud and Devops in Collaboration With E&ICT IIT Guwahati"    ){
-        link = "https://zfrmz.in/f2TOL2P2XmiKBCBScVxn"
-      }
-      if(
-        courseName === "Gen-AI program | Learnbay"    ){
-          link = "https://zfrmz.in/f2TOL2P2XmiKBCBScVxn"
-        }
-      
-      if(
-        courseName === "Advanced Certification in Cyber Security & Ethical Hacking"    ){
-          link = "https://zfrmz.in/nOlE6J6FvLoZ0su8MxT8"
-        }
-  
+    if (
+      courseName ===
+      "Executive Certification in Cloud and Devops in Collaboration With E&ICT IIT Guwahati"
+    ) {
+      link = "https://zfrmz.in/f2TOL2P2XmiKBCBScVxn";
+    }
+    if (courseName === "Gen-AI program | Learnbay") {
+      link = "https://zfrmz.in/f2TOL2P2XmiKBCBScVxn";
+    }
 
+    if (
+      courseName ===
+      "Advanced Certification in Cyber Security & Ethical Hacking"
+    ) {
+      link = "https://zfrmz.in/nOlE6J6FvLoZ0su8MxT8";
+    }
 
     const mailData = {
       from: "admissions@learnbay.co",
