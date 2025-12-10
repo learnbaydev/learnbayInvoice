@@ -28,7 +28,7 @@ const CartPage = ({ isConnected }) => {
   const [loading, setLoading] = useState(false);
   const [payLoading, setPayLoading] = useState(false);
   const [copy, setCopy] = useState({ copy1: false, copy2: false });
-  const couponDataCode = "";
+  let couponDataCode = "";
   const [successHandel, setSuccessHandel] = useState(false);
   const [showPayDetails, setShowPayDetails] = useState({
     paymentId: "",
@@ -78,8 +78,8 @@ const CartPage = ({ isConnected }) => {
       (accumulator, item) =>
         parseFloat(
           accumulator +
-            item.quantity * item.price -
-            (discount / 100) * (accumulator + item.quantity * item.price)
+          item.quantity * item.price -
+          (discount / 100) * (accumulator + item.quantity * item.price)
         ).toLocaleString("en-US"),
       0
     );
@@ -167,7 +167,7 @@ const CartPage = ({ isConnected }) => {
             console.log(pdfName);
             setPdfNames(pdfName);
           }
-        } catch (error) {}
+        } catch (error) { }
 
         //sending data to db//
         const dbSend = await axios.post("/api/databaseAuth", paymentData);
@@ -207,7 +207,7 @@ const CartPage = ({ isConnected }) => {
             const { msg } = await response.json();
             console.log(msg);
           }
-        } catch (error) {}
+        } catch (error) { }
         setPayments(true);
       },
       prefill: {
